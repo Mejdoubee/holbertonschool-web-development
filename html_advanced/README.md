@@ -1,23 +1,39 @@
 
-# HTML Advanced Project
+# HTML Advanced School Project
 
-Welcome to the "HTML Advanced" project! In this project, our goal is to implement a web page from scratch based entirely on a design file provided by a designer. The key focus here is on HTML structure, emphasizing semantic HTML. This project is a great opportunity to practice and demonstrate the ability to convert design into a well-structured HTML document.
+## Overview
 
-## Project Overview
-
-The objective of this project is to accurately translate a designer's vision into a functional HTML document. We are focusing solely on the HTML structure - no CSS or inline styles will be applied. This approach will help us concentrate on the semantic elements of HTML, ensuring that the content is organized logically and is accessible.
+This project focuses on creating a web page based on a designer's mockup, with an emphasis on semantic HTML. It's an exercise in translating a design into a structured HTML document, without the use of CSS or inline styles.
 
 ## Design File
 
-The design file for this project is available on Figma. You can view and interact with the design using the following link:
+The design mockup used for this project is available on Figma. View the design here: [Figma Design Link](https://www.figma.com/file/XrEAsu1vQj5fhVaNG38d2W/Homepage)
 
-[Figma](https://www.figma.com/file/XrEAsu1vQj5fhVaNG38d2W/Homepage)
-## Project Structure
+## Structure
 
+The webpage is organized into the following main sections:
 
-Here's the suggested structure for this HTML document:
+- **Header**: Contains navigation and logo.
+- **Banner**: The introductory banner section.
+- **Quote**: A section dedicated to displaying a featured quote.
+- **Videos**: Showcases a list of videos.
+- **Membership**: Details about membership options.
+- **FAQ**: Frequently asked questions.
+- **Footer**: Concluding information and additional links.
 
--   **Header:** Navigation and introductory content.
--   **Main Section:** Core content of the page.
--   **Aside:** Supplementary content if present in the design.
--   **Footer:** Footer and closing information.
+## Usage
+
+1. Clone the repository to your local machine.
+2. Open `index.html` in a browser to view the project.
+
+## Contributions
+
+Contributions are welcome. Please follow these steps:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/YourFeature`)
+3. Commit your Changes (`git commit -m 'Add some YourFeature'`)
+4. Push to the Branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+ Happy Coding!
