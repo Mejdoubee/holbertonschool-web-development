@@ -36,4 +36,6 @@ Contributions are welcome. Please follow these steps:
 4. Push to the Branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
- Happy Coding!
+### Contact
+
+[Ismail Mejdoub](mailto:6235@holbertonstudents.com) - For inquiries or further information.
