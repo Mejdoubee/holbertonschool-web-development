@@ -1,14 +1,22 @@
-* {
-  box-sizing: border-box; /* Good practice for consistent element sizing */
+:root {
+  --color-primary: #C271FF;
+  --color-secondary: #071629;
+  --color-white: #FFFFFF;
+  --color-text-light: rgba(7, 22, 41, 0.50);
+  --font-family-main: 'Source Sans Pro', sans-serif;
+  --border-radius: 10px;
 }
 
-/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--font-family-main);
   background: url('Images/background.png') no-repeat center center, 
-              radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.00) 0%, #071629 100%), 
+              radial-gradient(85.9% 85.9% at 50% 14.1%, rgba(41, 48, 61, 0.00) 0%, var(--color-secondary) 100%), 
               #7a7474;
   background-blend-mode: normal, color;
   background-size: cover;
@@ -38,7 +46,7 @@ body, html {
 }
 
 .nav-link {
-  color: #FFF;
+  color: var(--color-white);
   font-size: 0.75rem;
   font-weight: 700;
   text-decoration: none;
@@ -56,8 +64,6 @@ body, html {
   max-width: 90.50938rem;
 }
 
-
-/* Banner Text Container Styles */
 .banner-text-container {
   text-align: center;
   margin: 0 auto;
@@ -69,74 +75,60 @@ body, html {
   font-size: 7.5rem;
   font-weight: 700;
   margin-top: 5.4rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
-/* Subtext Container Styles */
 .subtext-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3.5rem;
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 1rem;
 }
 
-/* Subtext Item Styles */
-.banner .subtext-item {
-  color: #FFF;
+.subtext-item {
+  color: var(--color-white);
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   font-weight: 700;
 }
 
-
 .register-button {
-  width: 10.125rem;
-  height: 2.75rem;
-  flex-shrink: 0;
-  border-radius: 1.375rem;
-  background: #C271FF;
-  color: #FFF;
+  background: var(--color-primary);
+  color: var(--color-white);
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: var(--font-family-main);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: normal;
   border: none;
-  display: inline-block;
-  padding: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
-  margin-top: 0rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-/* Styles for "Learn from the pros" title */
-.pros-title {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 32px;
-  line-height: 40px;
-  color: #C271FF;
-  margin-bottom: 2rem;
-  padding: 3rem 0rem 3rem 0rem;
-  font-weight: 700;
 
+/* Pros Section */
+.pros-title {
+  font-size: 32px;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 .pros-title-bold {
-  color: #FFF;
+  color: var(--color-white);
   font-weight: 300;
 }
 
-/* Container for the pros section */
 .pros-container {
   text-align: center;
-  padding: 0.5rem 0rem 0rem 0rem;
+  padding: 0.5rem 0 0 0;
 }
 
-/* Styles for individual person blocks */
 .pros-content {
   display: flex;
   justify-content: center;
@@ -148,55 +140,47 @@ body, html {
   text-align: center;
 }
 
-
-/* Image Styles */
-.pros-content .person img {
+.person img {
   width: 9.375rem;
   height: 9.375rem;
-  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+
 }
 
-/* H3 Title Styles */
-.pros-content .person h3 {
+.person h3 {
   width: 9.375rem;
   color: #FFF;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.125rem;
   font-weight: 900;
   line-height: 1.6875rem;
 }
 
-/* P Description Styles */
-.pros-content .person p {
+.person p {
   width: 9.375rem;
   color: #FFF;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   font-style: italic;
   font-weight: 400;
   line-height: 1.5rem;
 }
 
-
-/* Adjust Quotes Section */
+/* Quotes Section */
 .quotes-section {
-  background-color: #C271FF;
-  height: 24.5rem;
-  margin: 0;
-  padding: 0;
-  color: #FFFFFF;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 24.5rem;
 }
 
 .quote-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   max-width: 1440px;
   padding: 3rem;
 }
@@ -215,7 +199,6 @@ body, html {
 }
 
 .quote-text-wrapper blockquote {
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   font-weight: 400;
   line-height: 34px;
@@ -226,160 +209,187 @@ body, html {
 }
 
 .quote-text-wrapper p {
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
   line-height: 34px;
   text-align: left;
-  margin: 0;
 }
 
-.quote-text-wrapper .weather-presenter {
+.weather-presenter {
   font-style: italic;
   font-weight: 400;
   margin-top: 0.5rem;
 }
 
-
-
-
-
-
+/* Tutorials Section */
 .tutorials-section {
-    background-color: #FFFFFF;
-    padding: 5rem 0;
-    text-align: left;
-    width: 90.5rem;
-    margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 5rem 0;
+  text-align: left;
+  width: 90.5rem;
+  margin: 0 auto;
 }
 
 .tutorials-title {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 32px;
-    line-height: 40px;
-    color: #071629;
-    margin: 0 auto;
-    width: 294px;
-    padding-bottom: 2rem;
-    font-weight: 300;
+  font-size: 32px;
+  color: #071629;
+  margin: 0 auto;
+  width: 294px;
+  padding-bottom: 2rem;
+  font-weight: 300;
 }
 
 .title-highlight {
-    font-weight: 700;
-    color: #C271FF;
+  font-weight: 700;
+  color: #C271FF;
 }
 
 .tutorials-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 .tutorial {
-    width: 15.9375rem;
-    height: 23.9375rem;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-
-.tutorial-heading, .tutorial-description {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-.tutorial-image {
-    width: 16.3125rem;
-    height: 154px;
-    border-radius: 5px 5px 0 0;
-    object-fit: cover;
-    margin-left: -1rem;
-
+  width: 15.9375rem;
+  height: 23.9375rem;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .tutorial-heading {
-    color: #071629;
-    font-family: Source Sans Pro;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 1rem;
+  color: #071629;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .tutorial-description {
-    color: rgba(7, 22, 41, 0.50);
-    font-family: Source Sans Pro;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    margin-top: 0.5rem;
+  color: rgba(7, 22, 41, 0.50);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .tutorial-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .author-info {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .author-details {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .author-image {
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 50%;
-    margin-right: 0.5rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
 
 .author-name {
-    color: #C271FF;
-    font-family: Source Sans Pro;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.6875rem;
-    margin-right: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+  margin-right: 0.5rem;
 }
 
 .rating-and-duration {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .tutorial-rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .tutorial-rating img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .tutorial-duration {
-    margin-bottom: 2rem;
-    margin-top: 0rem;
-    color: #C271FF;
-    font-family: Source Sans Pro;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.6875rem;
+  margin-bottom: 2rem;
+  margin-top: 0rem;
+  color: #C271FF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
 }
+
+
+
+
+.membership-section {
+  background-color: var(--color-secondary);
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--color-white);
+}
+
+
+.membership-title {
+  font-family: Source Sans Pro;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--color-white);
+  line-height: normal;
+}
+
+.title-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.membership-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.membership-block {
+  width: 257px;
+  text-align: center;
+}
+
+.membership-block img {
+  width: 43.67px;
+  height: 35.35px;
+}
+
+.membership-block h2 {
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--color-white);
+  margin: 1rem 0;
+}
+
+.membership-block p {
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--color-white);
+}
+
+
